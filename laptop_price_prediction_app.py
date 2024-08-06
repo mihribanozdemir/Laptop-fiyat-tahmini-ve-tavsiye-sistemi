@@ -40,6 +40,11 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
 
 def set_png_as_page_bg(png_file):
     bin_str = get_base64_of_bin_file(png_file)
@@ -58,7 +63,7 @@ def set_png_as_page_bg(png_file):
     """
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-    sidebar_bg_image = "sidebar.png"
+sidebar_bg_image = "sidebar.png"
 
 def set_png_as_page_bg(png_file):
     bin_str = get_base64_of_bin_file(png_file)
