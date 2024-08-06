@@ -618,7 +618,7 @@ elif selected == 'Model Tahmini':
 
 #############Model Değerlendirmesi##################
 elif selected == 'Model Değerlendirmesi':
-    col1, col2, col3 = st.columns([1, 7,1])
+    col1, col2 = st.columns([2, 8])
 
     with col1:
         st.image("Logo.png", width=185)
